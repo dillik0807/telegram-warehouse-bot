@@ -1,0 +1,17 @@
+# Переменные окружения для Railway.app
+# Скопируйте эти значения в Railway → Variables
+
+# Переменная 1: Токен Telegram бота
+BOT_TOKEN=8333299455:AAGVaSEmB7AHyDqTb2bY3kwQ0hnbx8iCC2s
+
+# Переменная 2: URL базы данных PostgreSQL
+DATABASE_URL=postgresql://postgres:BsZJFBgvpSAiOYdLjBTusBKqHDMFdbVs@nozomi.proxy.rlwy.net:30779/railway
+
+# Как добавить в Railway:
+# 1. Откройте ваш проект на Railway.app
+# 2. Перейдите в раздел "Variables"
+# 3. Нажмите "New Variable"
+# 4. Скопируйте имя переменной (например, BOT_TOKEN)
+# 5. Скопируйте значение (всё после знака =)
+# 6. Нажмите "Add"
+# 7. Повторите для второй переменной

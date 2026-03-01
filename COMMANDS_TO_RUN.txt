@@ -1,0 +1,98 @@
+===========================================
+КОМАНДЫ ДЛЯ ДЕПЛОЯ БОТА НА RAILWAY.APP
+===========================================
+
+ШАГ 1: ИНИЦИАЛИЗАЦИЯ GIT
+--------------------------
+git init
+git add .
+git commit -m "Initial commit for Railway"
+
+
+ШАГ 2: СОЗДАНИЕ РЕПОЗИТОРИЯ НА GITHUB
+--------------------------------------
+1. Откройте в браузере: https://github.com/new
+2. Название: telegram-warehouse-bot
+3. Тип: Private (приватный)
+4. Нажмите "Create repository"
+
+
+ШАГ 3: ЗАГРУЗКА КОДА НА GITHUB
+-------------------------------
+ВАЖНО: Замените "ВАШ-USERNAME" на ваш реальный username на GitHub!
+
+git remote add origin https://github.com/ВАШ-USERNAME/telegram-warehouse-bot.git
+git branch -M main
+git push -u origin main
+
+
+ШАГ 4: ДЕПЛОЙ НА RAILWAY
+-------------------------
+1. Откройте: https://railway.app
+2. Нажмите "Login" → войдите через GitHub
+3. Нажмите "New Project"
+4. Выберите "Deploy from GitHub repo"
+5. Выберите репозиторий: telegram-warehouse-bot
+6. Дождитесь начала деплоя
+
+
+ШАГ 5: ДОБАВЛЕНИЕ ПЕРЕМЕННЫХ
+-----------------------------
+В Railway откройте: Variables → New Variable
+
+Переменная 1:
+Name: BOT_TOKEN
+Value: 8333299455:AAGVaSEmB7AHyDqTb2bY3kwQ0hnbx8iCC2s
+
+Переменная 2:
+Name: DATABASE_URL
+Value: postgresql://postgres:BsZJFBgvpSAiOYdLjBTusBKqHDMFdbVs@nozomi.proxy.rlwy.net:30779/railway
+
+
+ШАГ 6: ПРОВЕРКА
+---------------
+1. Railway → Deployments → View Logs
+2. Убедитесь, что нет ошибок
+3. Откройте Telegram → найдите бота
+4. Отправьте: /start
+5. Бот должен ответить!
+
+
+===========================================
+ГОТОВО! БОТ РАБОТАЕТ 24/7
+===========================================
+
+ОБНОВЛЕНИЕ БОТА (когда изменили код):
+--------------------------------------
+git add .
+git commit -m "Update bot"
+git push
+
+Railway автоматически обновит бота!
+
+
+ПРОСМОТР ЛОГОВ:
+---------------
+Railway → Deployments → View Logs
+
+
+ПЕРЕЗАПУСК БОТА:
+----------------
+Railway → Settings → Restart
+
+
+ПОЛЕЗНЫЕ ССЫЛКИ:
+----------------
+Railway Dashboard: https://railway.app/dashboard
+GitHub: https://github.com
+Документация: README_RAILWAY.md
+
+
+НУЖНА ПОМОЩЬ?
+-------------
+1. Проверьте логи в Railway
+2. Убедитесь, что переменные добавлены правильно
+3. Проверьте, что БД доступна
+4. Смотрите RAILWAY_DEPLOY_INSTRUCTIONS.md
+
+===========================================
